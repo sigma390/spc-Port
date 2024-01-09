@@ -6,6 +6,39 @@ import {
   RxTwitterLogo,
   RxLinkedinLogo,
 } from "react-icons/rx";
+// import { FaLinkedin } from "react-icons/fa";
+// import  {FaXTwitter}  from "react-icons/fa6";
+//   //footer socials
+
+// import { ReactNode } from "react";
+
+//  interface FooterIcons{
+//     name:string;
+//     icon:React.ReactNode;
+//     link:string;
+//  }
+
+
+//   export const FootSocials :FooterIcons[] = [
+//     {
+//     name: "Discord",
+//     icon: "/instagram.svg",
+//     link:"https://instagram.com/_omkar._patil?igshid=YTQwZjQ0NmI0OA=="
+//   },
+//   {
+//     name: "Facebook",
+//     icon: <FaXTwitter />,
+//     link:"https://www.facebook.com/profile.php?id=100012152537560&mibextid=pwzcmfqlRWHhawsM"
+//   },
+//   {
+//     name: "Instagram",
+//     icon: <FaLinkedin/>,
+//     link:"https://www.linkedin.com/in/omkar-patil-4087b4242/"
+//   }]
+
+
+
+
 
 import { FaYoutube } from "react-icons/fa";
 
@@ -58,13 +91,13 @@ const Footer = () => {
                     </p>
                     <p className="flex flex-row items-center my-[15px] cursor-pointer">
                   
-                        <span className="text-[15px] ml-[6px]">mifwebchain@gmail.com</span>    
+                        <span className="text-[15px] ml-[6px]">390.ompatil@gmail.com</span>    
                     </p>
                 </div>
             </div>
 
             <div className="mb-[20px] text-[15px] text-center">
-                &copy; WebChain Dev 2023 Inc. All rights reserved
+                &copy; Sigma Dev 2024 Inc. All rights reserved
             </div>
         </div>
     </div>
