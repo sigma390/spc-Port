@@ -1,32 +1,35 @@
-import React from "react";
-import ProjectCard from "../sub/ProjectCard";
+import React from 'react';
+import ProjectCard from '../sub/ProjectCard';
 
 const Projects = () => {
   return (
     <div
-      className="flex flex-col items-center justify-center py-20"
-      id="projects"
+      className='flex flex-col items-center justify-center py-20'
+      id='projects'
     >
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
+      <h1 className='text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20'>
         My Projects
       </h1>
-      <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
+      <div className='h-full w-full flex flex-col md:flex-row gap-10 px-10'>
         <ProjectCard
-          src="/NextWebsite.png"
-          title="Modern Next.js Portfolio"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          src='/Gitpaers.png'
+          title='Git Papers Hub '
+          description='Paper Management System for Students. It is a web application that allows users to search for Previous Year papers. and view them in a user-friendly interface.'
         />
         <ProjectCard
-          src="/CardImage.png"
-          title="Interactive Website Cards"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          src='/AnalyticsWeb.png'
+          title='Analytics Company Website'
+          description='A website for an analytics company that provides data-driven insights and solutions to help businesses make informed decisions and drive growth.'
         />
         <ProjectCard
-          src="/SpaceWebsite.png"
-          title="Space Themed Website"
-          description="Explore my space-themed portfolio for a cosmic collection of innovative and boundary-pushing projects that defy gravity and showcase my out-of-this-world creativity."
+          src='/Spacw.png'
+          title='Space themed Website'
+          description='Explore my space-themed portfolio for a cosmic collection of innovative and boundary-pushing projects that defy gravity and showcase my out-of-this-world creativity.'
         />
       </div>
+      <h1>
+        <a href=''>See All Projects</a>
+      </h1>
     </div>
   );
 };
