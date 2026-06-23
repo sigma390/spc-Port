@@ -1,107 +1,99 @@
+"use client";
+
 import React from "react";
-import {
-  RxDiscordLogo,
-  RxGithubLogo,
-  RxInstagramLogo,
-  RxTwitterLogo,
-  RxLinkedinLogo,
-} from "react-icons/rx";
-// import { FaLinkedin } from "react-icons/fa";
-// import  {FaXTwitter}  from "react-icons/fa6";
-//   //footer socials
-
-// import { ReactNode } from "react";
-
-//  interface FooterIcons{
-//     name:string;
-//     icon:React.ReactNode;
-//     link:string;
-//  }
-
-
-//   export const FootSocials :FooterIcons[] = [
-//     {
-//     name: "Discord",
-//     icon: "/instagram.svg",
-//     link:"https://instagram.com/_omkar._patil?igshid=YTQwZjQ0NmI0OA=="
-//   },
-//   {
-//     name: "Facebook",
-//     icon: <FaXTwitter />,
-//     link:"https://www.facebook.com/profile.php?id=100012152537560&mibextid=pwzcmfqlRWHhawsM"
-//   },
-//   {
-//     name: "Instagram",
-//     icon: <FaLinkedin/>,
-//     link:"https://www.linkedin.com/in/omkar-patil-4087b4242/"
-//   }]
-
-
-
-
-
-import { FaYoutube } from "react-icons/fa";
+import Link from "next/link";
+import { RxGithubLogo, RxInstagramLogo, RxLinkedinLogo, RxEnvelopeClosed } from "react-icons/rx";
+import { FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] ">
-        <div className="w-full flex flex-col items-center justify-center m-auto">
-            <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
-                
-
-                <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                    <div className="font-bold text-[16px]">Community</div>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <FaYoutube />
-                        <span className="text-[15px] ml-[6px]">Youtube</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxGithubLogo />
-                        <span className="text-[15px] ml-[6px]">Github</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxDiscordLogo />
-                        <span className="text-[15px] ml-[6px]">Discord</span>    
-                    </p>
-                </div>
-                <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                    <div className="font-bold text-[16px]">Social Media</div>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <FaYoutube />
-                        <span className="text-[15px] ml-[6px]">Instagram</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxGithubLogo />
-                        <span className="text-[15px] ml-[6px]">Twitter</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                        <RxDiscordLogo />
-                        <span className="text-[15px] ml-[6px]">Linkedin</span>    
-                    </p>
-                </div>
-                <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                    <div className="font-bold text-[16px]">About</div>
-                   <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                     
-                        <span className="text-[15px] ml-[6px]">Become Sponsor</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                      
-                        <span className="text-[15px] ml-[6px]">Learning about me</span>    
-                    </p>
-                    <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                  
-                        <span className="text-[15px] ml-[6px]">390.ompatil@gmail.com</span>    
-                    </p>
-                </div>
-            </div>
-
-            <div className="mb-[20px] text-[15px] text-center">
-                &copy; Sigma Dev 2024 Inc. All rights reserved
-            </div>
+    <footer className="w-full relative z-[30] border-t border-[#2A0E61] bg-[#0300147a] backdrop-blur-md text-gray-200 py-12 px-4 md:px-10 lg:px-20">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        
+        {/* Branding Info */}
+        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <Link href="/" className="font-bold text-xl tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-cyan-500">
+            Omkar Patil
+          </Link>
+          <p className="text-gray-400 text-sm mt-2 max-w-xs leading-relaxed">
+            Engineering scalable full-stack applications, interactive 3D frontends, and robust system architectures.
+          </p>
         </div>
-    </div>
-  )
-}
 
-export default Footer
+        {/* Quick Portal Navigation */}
+        <div className="flex flex-col items-center md:items-start">
+          <h4 className="font-bold text-sm uppercase tracking-widest text-[#ba9cff] mb-4">Navigations</h4>
+          <div className="flex flex-col gap-2 items-center md:items-start text-sm">
+            <Link href="/" className="text-gray-400 hover:text-white transition-colors duration-300">
+              Home System
+            </Link>
+            <Link href="/about-me" className="text-gray-400 hover:text-white transition-colors duration-300">
+              About Me Core
+            </Link>
+            <Link href="/projects" className="text-gray-400 hover:text-white transition-colors duration-300">
+              Project Archive
+            </Link>
+          </div>
+        </div>
+
+        {/* Real Social Connections */}
+        <div className="flex flex-col items-center md:items-start">
+          <h4 className="font-bold text-sm uppercase tracking-widest text-[#00e5ff] mb-4">Social Gateways</h4>
+          <div className="flex flex-wrap md:flex-col gap-3 justify-center text-sm">
+            <a
+              href="https://github.com/sigma390"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gray-400 hover:text-[#ff00ff] hover:shadow-[0_0_8px_rgba(255,0,255,0.4)] px-2 py-1 rounded transition-all duration-300"
+            >
+              <RxGithubLogo className="text-base" />
+              <span>GitHub</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/omkar-patil-4087b4242/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gray-400 hover:text-[#ff00ff] hover:shadow-[0_0_8px_rgba(255,0,255,0.4)] px-2 py-1 rounded transition-all duration-300"
+            >
+              <RxLinkedinLogo className="text-base" />
+              <span>LinkedIn</span>
+            </a>
+            <a
+              href="https://instagram.com/_omkar._patil?igshid=YTQwZjQ0NmI0OA=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gray-400 hover:text-[#ff00ff] hover:shadow-[0_0_8px_rgba(255,0,255,0.4)] px-2 py-1 rounded transition-all duration-300"
+            >
+              <RxInstagramLogo className="text-base" />
+              <span>Instagram</span>
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100012152537560&mibextid=pwzcmfqlRWHhawsM"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gray-400 hover:text-[#ff00ff] hover:shadow-[0_0_8px_rgba(255,0,255,0.4)] px-2 py-1 rounded transition-all duration-300"
+            >
+              <FaFacebook className="text-base" />
+              <span>Facebook</span>
+            </a>
+            <a
+              href="mailto:390.ompatil@gmail.com"
+              className="flex items-center gap-2 text-gray-400 hover:text-[#ff00ff] hover:shadow-[0_0_8px_rgba(255,0,255,0.4)] px-2 py-1 rounded transition-all duration-300"
+            >
+              <RxEnvelopeClosed className="text-base" />
+              <span>390.ompatil@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div className="max-w-6xl mx-auto border-t border-[#2A0E61]/40 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+        <p>&copy; {new Date().getFullYear()} Omkar Patil. All rights reserved.</p>
+        <p className="font-mono">Status: Mission Completed</p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

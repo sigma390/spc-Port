@@ -155,7 +155,7 @@ export default function ProjectDetailsPage({ params }: { params: { slug: string 
   }
 
   return (
-    <div className="min-h-screen bg-[#030014] text-white pt-28 pb-20 px-4 md:px-10 lg:px-20 relative overflow-hidden">
+    <div className="min-h-screen bg-[#030014] text-white pt-28 pb-20 px-4 md:px-10 lg:px-20 relative z-[30] overflow-hidden">
       {/* Background Orbs */}
       <div 
         className="absolute top-[-10%] left-[-15%] w-[60vw] h-[60vw] rounded-full blur-[150px] pointer-events-none transition-all duration-1000" 
@@ -210,7 +210,7 @@ export default function ProjectDetailsPage({ params }: { params: { slug: string 
             
             {/* Overlay Text Details inside Hero */}
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 flex flex-col justify-end">
-              <div className="flex flex-wrap items-center gap-3 mb-3">
+              <div className="flex flex-wrap items-center gap-3 mb-3 font-mono">
                 <span className="px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase border border-[#7042f861] bg-[#7042f820] text-[#ba9cff]">
                   {project.role}
                 </span>
@@ -279,7 +279,7 @@ export default function ProjectDetailsPage({ params }: { params: { slug: string 
               <h3 className="text-lg font-bold mb-4 text-[#ba9cff] uppercase tracking-widest text-xs">
                 System Specs
               </h3>
-              <div className="flex flex-col gap-4 text-sm">
+              <div className="flex flex-col gap-4 text-sm font-mono">
                 <div className="flex justify-between border-b border-[#2a0e61]/50 pb-2">
                   <span className="text-gray-400">Developer Role</span>
                   <span className="font-semibold text-white">{project.role}</span>
@@ -304,7 +304,7 @@ export default function ProjectDetailsPage({ params }: { params: { slug: string 
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1.5 rounded-lg text-xs font-semibold border border-[#2A0E61] bg-[#080226] text-gray-300 hover:text-[#ba9cff] hover:border-[#7042f8]/50 transition-all cursor-default"
+                    className="px-3 py-1.5 rounded-lg text-xs font-semibold border border-[#2A0E61] bg-[#080226] text-gray-300 hover:text-[#ba9cff] hover:border-[#7042f8]/50 transition-all cursor-default font-mono"
                   >
                     {tag}
                   </span>

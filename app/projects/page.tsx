@@ -107,7 +107,7 @@ const cardVariants = {
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-[#030014] text-white pt-28 pb-20 px-4 md:px-10 lg:px-20 relative overflow-hidden">
+    <div className="min-h-screen bg-[#030014] text-white pt-28 pb-20 px-4 md:px-10 lg:px-20 relative z-[30] overflow-hidden">
       {/* Background glowing orbs */}
       <div className="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#7042f8]/10 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#00e5ff]/5 blur-[120px] pointer-events-none" />
@@ -192,7 +192,7 @@ export default function ProjectsPage() {
                   }`}
                 >
                   {/* System Specs Badge */}
-                  <div className="flex flex-wrap items-center gap-3 mb-4">
+                  <div className="flex flex-wrap items-center gap-3 mb-4 font-mono">
                     <span className="px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase border border-[#7042f861] bg-[#7042f815] text-[#ba9cff]">
                       {project.role}
                     </span>
@@ -238,7 +238,7 @@ export default function ProjectsPage() {
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="px-3 py-1 rounded-lg text-xs border border-[#2A0E61] bg-[#080226] text-gray-300 hover:text-[#ba9cff] hover:border-[#7042f8]/50 transition-colors"
+                          className="px-3 py-1 rounded-lg text-xs border border-[#2A0E61] bg-[#080226] text-gray-300 hover:text-[#ba9cff] hover:border-[#7042f8]/50 transition-colors font-mono"
                         >
                           {tag}
                         </span>

@@ -125,7 +125,7 @@ const skillsMatrix = {
 
 export default function AboutMePage() {
   return (
-    <div className="min-h-screen bg-[#030014] text-white pt-28 pb-20 px-4 md:px-10 lg:px-20 relative overflow-hidden">
+    <div className="min-h-screen bg-[#030014] text-white pt-28 pb-20 px-4 md:px-10 lg:px-20 relative z-[30] overflow-hidden">
       {/* Background Orbs */}
       <div className="absolute top-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-[#7042f8]/10 blur-[150px] pointer-events-none" />
       <div className="absolute bottom-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#00e5ff]/5 blur-[120px] pointer-events-none" />
@@ -172,7 +172,7 @@ export default function AboutMePage() {
               </p>
 
               {/* Contact Details embedded below bio */}
-              <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-6">
+              <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-6 font-mono">
                 <a href="mailto:390.ompatil@gmail.com" className="flex items-center gap-2.5 hover:text-white transition-colors bg-[#080226]/40 px-3.5 py-2 rounded-lg border border-[#2A0E61]/60">
                   <RxEnvelopeClosed className="text-base text-[#ba9cff]" />
                   <span>390.ompatil@gmail.com</span>
@@ -182,7 +182,7 @@ export default function AboutMePage() {
                   <span>+91 7083630557</span>
                 </a>
               </div>
-              <div className="flex gap-4">
+              <div className="flex gap-4 font-mono">
                 <a
                   href="https://github.com/sigma390"
                   target="_blank"
@@ -231,7 +231,7 @@ export default function AboutMePage() {
               <p className="text-gray-400 text-sm md:text-base">Bachelor of Engineering, Major in Computer Science</p>
             </div>
             <div className="text-right">
-              <span className="px-3 py-1.5 rounded-lg border border-purple-500/30 bg-purple-500/10 text-purple-300 font-bold text-sm">
+              <span className="px-3 py-1.5 rounded-lg border border-purple-500/30 bg-purple-500/10 text-purple-300 font-bold text-sm font-mono">
                 CGPA: 9.23 / 10
               </span>
             </div>
@@ -270,7 +270,7 @@ export default function AboutMePage() {
                       </p>
                     </div>
                     <div className="text-right">
-                      <span className="px-3 py-1 rounded-full text-xs font-semibold border border-[#7042f861] bg-[#7042f815] text-[#ba9cff]">
+                      <span className="px-3 py-1 rounded-full text-xs font-semibold border border-[#7042f861] bg-[#7042f815] text-[#ba9cff] font-mono">
                         {exp.duration}
                       </span>
                     </div>
@@ -298,7 +298,7 @@ export default function AboutMePage() {
                     <h4 className="text-xs uppercase font-bold tracking-widest text-gray-400 mb-2">Technologies Deployed</h4>
                     <div className="flex flex-wrap gap-1.5">
                       {exp.techStack.map((tech) => (
-                        <span key={tech} className="px-2.5 py-1 rounded-md text-xs border border-[#2a0e61] bg-[#080226]/50 text-gray-300 hover:text-[#ff00ff] hover:border-[#ff00ff] hover:shadow-[0_0_10px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-default">
+                        <span key={tech} className="px-2.5 py-1 rounded-md text-xs border border-[#2a0e61] bg-[#080226]/50 text-gray-300 hover:text-[#ff00ff] hover:border-[#ff00ff] hover:shadow-[0_0_10px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-default font-mono">
                           {tech}
                         </span>
                       ))}
@@ -363,7 +363,7 @@ export default function AboutMePage() {
               <h3 className="text-sm font-bold text-[#ba9cff] uppercase tracking-widest mb-3">Languages</h3>
               <div className="flex flex-wrap gap-2">
                 {skillsMatrix.languages.map((item) => (
-                  <span key={item} className="px-2.5 py-1 rounded bg-[#030014] border border-[#2A0E61] text-xs text-gray-300 hover:text-[#ff00ff] hover:border-[#ff00ff] hover:shadow-[0_0_10px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-default">
+                  <span key={item} className="px-2.5 py-1 rounded bg-[#030014] border border-[#2A0E61] text-xs text-gray-300 hover:text-[#ff00ff] hover:border-[#ff00ff] hover:shadow-[0_0_10px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-default font-mono">
                     {item}
                   </span>
                 ))}
@@ -375,7 +375,7 @@ export default function AboutMePage() {
               <h3 className="text-sm font-bold text-[#00e5ff] uppercase tracking-widest mb-3">AI-Assisted Tools</h3>
               <div className="flex flex-wrap gap-2">
                 {skillsMatrix.aiTools.map((item) => (
-                  <span key={item} className="px-2.5 py-1 rounded bg-[#030014] border border-[#2A0E61] text-xs text-gray-300 hover:text-[#ff00ff] hover:border-[#ff00ff] hover:shadow-[0_0_10px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-default">
+                  <span key={item} className="px-2.5 py-1 rounded bg-[#030014] border border-[#2A0E61] text-xs text-gray-300 hover:text-[#ff00ff] hover:border-[#ff00ff] hover:shadow-[0_0_10px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-default font-mono">
                     {item}
                   </span>
                 ))}
@@ -387,7 +387,7 @@ export default function AboutMePage() {
               <h3 className="text-sm font-bold text-[#ba9cff] uppercase tracking-widest mb-3">Frontend Development</h3>
               <div className="flex flex-wrap gap-2">
                 {skillsMatrix.frontend.map((item) => (
-                  <span key={item} className="px-2.5 py-1 rounded bg-[#030014] border border-[#2A0E61] text-xs text-gray-300 hover:text-[#ff00ff] hover:border-[#ff00ff] hover:shadow-[0_0_10px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-default">
+                  <span key={item} className="px-2.5 py-1 rounded bg-[#030014] border border-[#2A0E61] text-xs text-gray-300 hover:text-[#ff00ff] hover:border-[#ff00ff] hover:shadow-[0_0_10px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-default font-mono">
                     {item}
                   </span>
                 ))}
@@ -399,7 +399,7 @@ export default function AboutMePage() {
               <h3 className="text-sm font-bold text-[#00e5ff] uppercase tracking-widest mb-3">Backend Development</h3>
               <div className="flex flex-wrap gap-2">
                 {skillsMatrix.backend.map((item) => (
-                  <span key={item} className="px-2.5 py-1 rounded bg-[#030014] border border-[#2A0E61] text-xs text-gray-300 hover:text-[#ff00ff] hover:border-[#ff00ff] hover:shadow-[0_0_10px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-default">
+                  <span key={item} className="px-2.5 py-1 rounded bg-[#030014] border border-[#2A0E61] text-xs text-gray-300 hover:text-[#ff00ff] hover:border-[#ff00ff] hover:shadow-[0_0_10px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-default font-mono">
                     {item}
                   </span>
                 ))}
@@ -411,7 +411,7 @@ export default function AboutMePage() {
               <h3 className="text-sm font-bold text-[#ba9cff] uppercase tracking-widest mb-3">Tools & DevOps</h3>
               <div className="flex flex-wrap gap-2">
                 {skillsMatrix.devops.map((item) => (
-                  <span key={item} className="px-2.5 py-1 rounded bg-[#030014] border border-[#2A0E61] text-xs text-gray-300 hover:text-[#ff00ff] hover:border-[#ff00ff] hover:shadow-[0_0_10px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-default">
+                  <span key={item} className="px-2.5 py-1 rounded bg-[#030014] border border-[#2A0E61] text-xs text-gray-300 hover:text-[#ff00ff] hover:border-[#ff00ff] hover:shadow-[0_0_10px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-default font-mono">
                     {item}
                   </span>
                 ))}
@@ -423,7 +423,7 @@ export default function AboutMePage() {
               <h3 className="text-sm font-bold text-[#00e5ff] uppercase tracking-widest mb-3">Integrations & Security</h3>
               <div className="flex flex-wrap gap-2">
                 {skillsMatrix.integrations.map((item) => (
-                  <span key={item} className="px-2.5 py-1 rounded bg-[#030014] border border-[#2A0E61] text-xs text-gray-300 hover:text-[#ff00ff] hover:border-[#ff00ff] hover:shadow-[0_0_10px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-default">
+                  <span key={item} className="px-2.5 py-1 rounded bg-[#030014] border border-[#2A0E61] text-xs text-gray-300 hover:text-[#ff00ff] hover:border-[#ff00ff] hover:shadow-[0_0_10px_rgba(255,0,255,0.5)] transition-all duration-300 cursor-default font-mono">
                     {item}
                   </span>
                 ))}
