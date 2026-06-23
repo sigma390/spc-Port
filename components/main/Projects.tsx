@@ -15,21 +15,29 @@ const Projects = () => {
           src='/Gitpaers.png'
           title='Git Papers Hub '
           description='Paper Management System for Students. It is a web application that allows users to search for Previous Year papers. and view them in a user-friendly interface.'
+          slug='git-papers-hub'
         />
         <ProjectCard
           src='/AnalyticsWeb.png'
           title='Analytics Company Website'
           description='A website for an analytics company that provides data-driven insights and solutions to help businesses make informed decisions and drive growth.'
+          slug='analytics-company-website'
         />
         <ProjectCard
           src='/Spacw.png'
           title='Space themed Website'
           description='Explore my space-themed portfolio for a cosmic collection of innovative and boundary-pushing projects that defy gravity and showcase my out-of-this-world creativity.'
+          slug='space-themed-website'
         />
       </div>
-      <h1>
-        <a href=''>See All Projects</a>
-      </h1>
+      <div className='mt-10 z-[20]'>
+        <a
+          href='/projects'
+          className='py-3 px-6 button-primary text-center text-white rounded-lg cursor-pointer hover:scale-105 transition-all duration-150 relative inline-block'
+        >
+          See All Projects
+        </a>
+      </div>
     </div>
   );
 };
